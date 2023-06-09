@@ -22,6 +22,9 @@ const Home: NextPage = () => (
         <li>
           <Link href="/001">Day 001</Link>
         </li>
+        <li>
+          <Link href="/002">Day 002</Link>
+        </li>
       </ul>
     </main>
   </>
