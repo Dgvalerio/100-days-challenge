@@ -1,18 +1,14 @@
+import { FC } from 'react';
+
 import { NextPage } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
 import styled from '@emotion/styled';
 
+import { Main } from '@/pages/styled';
+
 const inter = Inter({ subsets: ['latin'] });
-
-const Main = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 100vh;
-`;
 
 const Task = styled.div`
   height: 400px;
@@ -108,33 +104,37 @@ const Task = styled.div`
   }
 `;
 
-const Day001: NextPage = () => (
+export const Day001: FC = () => (
+  <Task>
+    <div id="content">
+      <div id="numbers">
+        <div id="n0"></div>
+        <div id="n1"></div>
+        <div id="n2"></div>
+        <div id="n3"></div>
+      </div>
+      <div id="title">
+        <h1>D</h1>
+        <h1>a</h1>
+        <h1>y</h1>
+        <h1>s</h1>
+      </div>
+      <div id="sub-title">
+        <h2>css</h2> <h2>challenge</h2>
+      </div>
+    </div>
+  </Task>
+);
+
+const Page: NextPage = () => (
   <>
     <Head>
       <title>100 Days Challenge - Day 001</title>
     </Head>
     <Main className={inter.className}>
-      <Task>
-        <div id="content">
-          <div id="numbers">
-            <div id="n0"></div>
-            <div id="n1"></div>
-            <div id="n2"></div>
-            <div id="n3"></div>
-          </div>
-          <div id="title">
-            <h1>D</h1>
-            <h1>a</h1>
-            <h1>y</h1>
-            <h1>s</h1>
-          </div>
-          <div id="sub-title">
-            <h2>css</h2> <h2>challenge</h2>
-          </div>
-        </div>
-      </Task>
+      <Day001 />
     </Main>
   </>
 );
 
-export default Day001;
+export default Page;

@@ -137,28 +137,32 @@ const Task = styled.div`
   }
 `;
 
-const Day001: NextPage = () => {
+export const Day002: NextPage = () => {
   const [state, setState] = useState('');
 
   const animate = (): void =>
     setState((prev) => (prev === 'opened' ? 'closed' : 'opened'));
 
   return (
-    <>
-      <Head>
-        <title>100 Days Challenge - Day 001</title>
-      </Head>
-      <Main>
-        <Task>
-          <div id="content" onClick={animate}>
-            <div id="line-1" className={state}></div>
-            <div id="line-2" className={state}></div>
-            <div id="line-3" className={state}></div>
-          </div>
-        </Task>
-      </Main>
-    </>
+    <Task>
+      <div id="content" onClick={animate}>
+        <div id="line-1" className={state}></div>
+        <div id="line-2" className={state}></div>
+        <div id="line-3" className={state}></div>
+      </div>
+    </Task>
   );
 };
 
-export default Day001;
+const Page: NextPage = () => (
+  <>
+    <Head>
+      <title>100 Days Challenge - Day 002</title>
+    </Head>
+    <Main>
+      <Day002 />
+    </Main>
+  </>
+);
+
+export default Page;
