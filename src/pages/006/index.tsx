@@ -30,55 +30,53 @@ const Task = styled(Container)`
       font-size: 11px;
     }
 
-    #main {
-      flex: 1;
+    #main,
+    #panels,
+    #image-group,
+    #button-group,
+    #panels > div {
       display: flex;
       flex-direction: column;
+    }
+
+    #main {
+      flex: 1;
       justify-content: center;
 
       #infos {
         #image-group {
-          display: flex;
-          flex-direction: column;
           justify-content: center;
           align-items: center;
 
           #large-border,
           #medium-border {
             animation: ease 2s;
-          }
-
-          #large-border {
             animation-name: none;
-            transform: rotate(90deg);
 
             display: flex;
             align-items: center;
             justify-content: center;
-
-            height: 82px;
-            width: 82px;
 
             border: 1px solid #786450;
             border-top-color: #fff;
             border-radius: 100%;
+          }
+
+          #large-border {
+            transform: rotate(90deg);
+
+            height: 82px;
+            width: 82px;
+
             margin-bottom: -79px;
           }
 
           #medium-border {
-            animation-name: none;
             transform: rotate(270deg);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
             height: 76px;
             width: 76px;
 
-            border: 1px solid #77634f;
-            border-top-color: #fff;
-            border-radius: 100%;
             margin-bottom: -73px;
           }
 
@@ -161,8 +159,6 @@ const Task = styled(Container)`
       }
 
       #button-group {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         gap: 8px;
 
@@ -187,8 +183,6 @@ const Task = styled(Container)`
 
     #panels {
       gap: 1px;
-      display: flex;
-      flex-direction: column;
 
       div {
         &:first-child {
@@ -200,8 +194,6 @@ const Task = styled(Container)`
         }
 
         flex: 1;
-        display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
 
