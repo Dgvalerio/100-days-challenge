@@ -185,11 +185,11 @@ const Task = styled(Container)`
       gap: 1px;
 
       div {
-        &:first-child {
+        &:first-of-type {
           border-top-right-radius: 3px;
         }
 
-        &:last-child {
+        &:last-of-type {
           border-bottom-right-radius: 3px;
         }
 
