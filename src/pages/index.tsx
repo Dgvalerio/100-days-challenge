@@ -9,6 +9,7 @@ import styled from '@emotion/styled';
 
 import { Day001 } from '@/pages/001';
 import { Day002 } from '@/pages/002';
+import { Day004 } from '@/pages/004';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -47,6 +48,10 @@ const Home: NextPage = () => {
           <div onClick={(): void => void router.push('/002')}>
             <Typography variant="overline">Day 002</Typography>
             <Day002 />
+          </div>
+          <div onClick={(): void => void router.push('/004')}>
+            <Typography variant="overline">Day 004</Typography>
+            <Day004 />
           </div>
         </Tasks>
       </main>
