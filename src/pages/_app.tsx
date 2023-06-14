@@ -3,12 +3,12 @@ import type { AppProps } from 'next/app';
 
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 
-export const lightTheme = createTheme({ palette: { mode: 'light' } });
+// export const lightTheme = createTheme({ palette: { mode: 'light' } });
 
-// export const darkTheme = createTheme({ palette: { mode: 'dark' } });
+export const darkTheme = createTheme({ palette: { mode: 'dark' } });
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => (
-  <ThemeProvider theme={lightTheme}>
+  <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <Component {...pageProps} />
   </ThemeProvider>

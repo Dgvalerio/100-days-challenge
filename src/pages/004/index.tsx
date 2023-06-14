@@ -1,20 +1,14 @@
+import { FC } from 'react';
+
 import { NextPage } from 'next';
 import Head from 'next/head';
 
 import styled from '@emotion/styled';
 
-import { Main } from '@/pages/styled';
+import { Container, Main } from '@/pages/styled';
 
-const Task = styled.div`
-  height: 400px;
-  width: 400px;
-
-  border-radius: 8px;
+const Task = styled(Container)`
   background: #e36161;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   #content {
     display: flex;
@@ -126,7 +120,7 @@ const Task = styled.div`
   }
 `;
 
-export const Day004: NextPage = () => (
+export const Day004: FC = () => (
   <Task>
     <div id="content">
       <div id="large"></div>

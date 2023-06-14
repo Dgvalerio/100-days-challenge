@@ -1,22 +1,14 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import { NextPage } from 'next';
 import Head from 'next/head';
 
 import styled from '@emotion/styled';
 
-import { Main } from '@/pages/styled';
+import { Container, Main } from '@/pages/styled';
 
-const Task = styled.div`
-  height: 400px;
-  width: 400px;
-
-  border-radius: 8px;
+const Task = styled(Container)`
   background: #3fae81;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   #content {
     display: flex;
@@ -137,7 +129,7 @@ const Task = styled.div`
   }
 `;
 
-export const Day002: NextPage = () => {
+export const Day002: FC = () => {
   const [state, setState] = useState('');
 
   const animate = (): void =>

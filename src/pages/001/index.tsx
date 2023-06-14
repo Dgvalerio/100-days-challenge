@@ -1,27 +1,16 @@
 import { FC } from 'react';
 
 import { NextPage } from 'next';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
 import styled from '@emotion/styled';
 
-import { Main } from '@/pages/styled';
+import { Container, Main } from '@/pages/styled';
 
-const inter = Inter({ subsets: ['latin'] });
-
-const Task = styled.div`
-  height: 400px;
-  width: 400px;
-
-  border-radius: 8px;
+const Task = styled(Container)`
   background: linear-gradient(45deg, #433da0, #4dc4c8);
   font-family: 'Courier New', 'Courier', sans-serif;
   text-transform: uppercase;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   #content {
     #numbers {
@@ -131,7 +120,7 @@ const Page: NextPage = () => (
     <Head>
       <title>100 Days Challenge - Day 001</title>
     </Head>
-    <Main className={inter.className}>
+    <Main>
       <Day001 />
     </Main>
   </>
